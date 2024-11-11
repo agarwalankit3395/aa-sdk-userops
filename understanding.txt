@@ -1,0 +1,31 @@
+User will do Social login using Web3Auth and it will generate the EOA for the first time.
+A Etherverse NFT will be minted to that EOA wallet which is Web3Auth generated wallet using the Paymaster Contract.
+After that using TBA registery (Create2) a TBA account will be generated. (In contract we have to mention and work) (Etherverse NFT and TBA in same function)
+
+AA, Paymaster, EntryPoint. handleOps functions
+
+TBA calling with EntryPoint and AA is generate and gas Sponsership
+
+Normal Flow
+EOA called
+
+
+
+EOA 1234
+Contract Address (static)
+token Id 5678
+
+TBA is a Smart contract which is linked to a NFT and holds your ERC20 erc721 erc1155
+
+
+Account Abstraction or Smart Account which is a Smart contract which act as a EOA wallet. (can't sign a message)
+
+
+EntryPointModule#EntryPoint - 0x694824Ba3b6CEb9beD3Fbd806CDFA0D85fD56a86
+TokenBoundAccount#ERC6551Registry - 0x9Ac375A25ef2A3cC9d8119acA4483d551628d350
+TokenBoundAccount#AccountGuardian - 0x749CAAe29F440d6f21aC596a5712AEa18a1e6E57
+TokenBoundAccountMultiCall#Multicall3 - 0x2e565922F11376da24EC03a68cb2d0eD5747639A
+
+AccountV2Implementation#AccountV3 - 0x01FE0E42DF6524727a7Ee62E3fb6e6CC07fF4594
+
+CreationCode : 0xc16C3718B2a8401bAF2338B371895a8ED8678b2D

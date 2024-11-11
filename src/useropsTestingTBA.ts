@@ -1,6 +1,6 @@
 import { LocalAccountSigner, arbitrumSepolia, polygonAmoy } from "@alchemy/aa-core";
 // import Example from "../artifacts/Example.json";
-import abi from "../ABI/BASIC_NFT.json";
+import abi from "../ABI/ERC6551REGISTERY.json";
 import dotenv from "dotenv";
 import { createModularAccountAlchemyClient } from "@alchemy/aa-alchemy";
 import { Hex, encodeFunctionData } from "viem";
@@ -14,7 +14,7 @@ const PRIV_KEY = process.env.PRIV_KEY!;
 // const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 const signer = LocalAccountSigner.privateKeyToAccountSigner(`0x${PRIV_KEY}`);
 // const contractAddr: Hex = "0x7920b6d8b07f0b9a3b96f238c64e022278db1419";
-const contractAddr: Hex = "0x8783d99fF5439005F6e5198c9AfF5Cf329E75300"; // BasicNFT
+const contractAddr: Hex = "0x9Ac375A25ef2A3cC9d8119acA4483d551628d350"; // ERC6551Registery
 
 (async () => {
   // modular account client
@@ -29,8 +29,8 @@ const contractAddr: Hex = "0x8783d99fF5439005F6e5198c9AfF5Cf329E75300"; // Basic
 
   const cd = encodeFunctionData({
     abi,
-    functionName: "safeMint",
-    args: ["0x94ffc385b64E015EEb83F1f67E71F941ea9dd25B"],
+    functionName: "createAccount",
+    args: ["0x01FE0E42DF6524727a7Ee62E3fb6e6CC07fF4594","0x4723c0bd4a6bc92fc353a0d067b3c444fbc2688f522ddd89ccae5a1303020a1e","80002","0x8783d99fF5439005F6e5198c9AfF5Cf329E75300","5"],
   })
 //Transaction performed
   const result = await client.sendUserOperation({
